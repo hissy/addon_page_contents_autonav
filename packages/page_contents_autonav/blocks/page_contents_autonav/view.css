@@ -1,0 +1,8 @@
+.ccm-page-contents-subnav {
+	margin-bottom: 1em;
+}
+.ccm-page-contents-subnav li {
+	list-style: none;
+	display: inline;
+	margin: 0 1em 1em 0;
+}
