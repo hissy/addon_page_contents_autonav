@@ -9,9 +9,10 @@ $(document).ready(function(){
 	$('<?php echo h($selector); ?>').each(function(){
 		count++;
 		var id = $(this).prop('id');
+		var bid = <?php echo h($bid); ?>;
 		var text = $(this).text();
 		if (!id) {
-			id = 'section-'+count;
+			id = 'section-'+bid+'-'+count;
 			$(this).prop('id',id);
 		}
 		html += '<li><a href="#'+id+'">'+text+'</a></li>';
