@@ -1,7 +1,10 @@
-<?php   defined('C5_EXECUTE') or die("Access Denied.");
+<?php
+namespace Concrete\Package\PageContentsAutonav\Block\PageContentsAutonav;
 
-class PageContentsAutonavBlockController extends BlockController {
-	
+use Concrete\Core\Block\BlockController;
+
+class Controller extends BlockController
+{
 	public function getBlockTypeDescription() {
 		return t('Horizontal nav of page contents');
 	}

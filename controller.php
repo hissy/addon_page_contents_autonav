@@ -1,11 +1,14 @@
-<?php 
-defined('C5_EXECUTE') or die(_("Access Denied."));
+<?php
+namespace Concrete\Package\PageContentsAutonav;
 
-class PageContentsAutonavPackage extends Package {
+use Concrete\Core\Block\BlockType\BlockType;
+use Concrete\Core\Package\Package;
 
+class Controller extends Package
+{
 	protected $pkgHandle = 'page_contents_autonav';
-	protected $appVersionRequired = '5.6.0';
-	protected $pkgVersion = '0.1';
+	protected $appVersionRequired = '8.1.0';
+	protected $pkgVersion = '1.0';
 	
 	public function getPackageDescription() {
 		return t("Horizontal nav of page contents");
@@ -17,7 +20,6 @@ class PageContentsAutonavPackage extends Package {
 	
 	public function install() {
 		$pkg = parent::install();
-		BlockType::installBlockTypeFromPackage('page_contents_autonav',$pkg);
+		BlockType::installBlockType('page_contents_autonav', $pkg);
 	}
-
 }
